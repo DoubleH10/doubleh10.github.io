@@ -124,9 +124,9 @@ const Index = () => {
           duration: 0.8,
           delay: 0.4
         }} className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            AI/ML Engineer & MSc candidate focused on applied generative intelligence. Building agentic
-            systems that learn, reason, and improve through LLM research, automation engineering, and
-            product design.
+            AI/ML Engineer with a unique dual expertise in business strategy and technical execution. 
+            Combining deep learning research with product design and automation engineering to build 
+            agentic systems that transform enterprise operations and drive measurable business impact.
           </motion.p>
 
           <motion.div initial={{
@@ -480,7 +480,7 @@ const Index = () => {
           }} whileTap={{
             scale: 0.95
           }}>
-              <Button size="lg" variant="outline" onClick={() => window.open("#")}>
+              <Button size="lg" variant="outline" onClick={() => window.open("/Hadi_Hijazi_CV.pdf", "_blank")}>
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
               </Button>
