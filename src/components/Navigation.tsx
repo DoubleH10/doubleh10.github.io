@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Mail, Linkedin, Github, FileDown } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -21,19 +21,25 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-xl border-b border-border" : "bg-transparent"
+        scrolled ? "bg-background/80 backdrop-blur-sm" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection("hero")}
-            className="font-heading text-xl font-bold text-gradient"
+            className="font-heading text-lg font-semibold text-foreground"
           >
             HH
           </button>
 
           <div className="hidden md:flex items-center gap-8">
+            <button
+              onClick={() => scrollToSection("about")}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              About
+            </button>
             <button
               onClick={() => scrollToSection("projects")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -41,16 +47,10 @@ const Navigation = () => {
               Projects
             </button>
             <button
-              onClick={() => scrollToSection("tech")}
+              onClick={() => scrollToSection("experience")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Tech Stack
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              About
+              Experience
             </button>
             <button
               onClick={() => scrollToSection("contact")}
@@ -60,30 +60,30 @@ const Navigation = () => {
             </button>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => window.open("mailto:hadi.hijazi@example.com")}
-              className="hover:text-primary transition-colors"
+              onClick={() => window.open("https://github.com/hadihijazi", "_blank")}
+              className="hover:text-accent transition-colors h-9 w-9"
             >
-              <Mail className="h-4 w-4" />
+              <Github className="h-4 w-4" />
             </Button>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => window.open("https://linkedin.com/in/hadihijazi", "_blank")}
-              className="hover:text-primary transition-colors"
+              className="hover:text-accent transition-colors h-9 w-9"
             >
               <Linkedin className="h-4 w-4" />
             </Button>
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => window.open("https://github.com/hadihijazi", "_blank")}
-              className="hover:text-primary transition-colors"
+              onClick={() => window.open("mailto:hadi.hijazi@example.com")}
+              className="hover:text-accent transition-colors h-9 w-9"
             >
-              <Github className="h-4 w-4" />
+              <Mail className="h-4 w-4" />
             </Button>
           </div>
         </div>
