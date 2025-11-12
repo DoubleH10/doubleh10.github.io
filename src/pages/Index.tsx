@@ -92,7 +92,7 @@ const Index = () => {
           duration: 0.6
         }}>
             <Badge className="mb-8 bg-accent/10 text-accent border-accent/20 hover:bg-accent/20">
-                AI Engineer 
+                                      AI Engineer                                              
  
  
  
