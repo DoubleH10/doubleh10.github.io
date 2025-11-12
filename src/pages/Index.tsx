@@ -163,7 +163,7 @@ const Index = () => {
           }} whileTap={{
             scale: 0.9
           }}>
-              <Button variant="ghost" size="icon" onClick={() => window.open("https://github.com/doubleh", "_blank")} className="hover:text-accent transition-colors h-10 w-10">
+              <Button variant="ghost" size="icon" onClick={() => window.open("https://github.com/doubleh10", "_blank")} className="hover:text-accent transition-colors h-10 w-10">
                 <Github className="h-5 w-5" />
               </Button>
             </motion.div>
