@@ -1,61 +1,60 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import ProjectCard from "@/components/ProjectCard";
-import TechBadge from "@/components/TechBadge";
-import { Mail, Linkedin, Github, FileDown, ArrowDown } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const Index = () => {
   const projects = [
     {
-      title: "BLOQ Core — Agentic Infrastructure",
-      description: "Multi-agent orchestration framework for production LLM workflows",
+      title: "BLOQ Core",
+      description: "Agentic Infrastructure",
       highlights: [
         "Built multi-agent orchestration using LangGraph + FastAPI",
         "Integrated Supabase, Clerk, and Langfuse observability",
         "Designed modular BaseAgent template for production workflows",
       ],
-      tags: ["LangGraph", "FastAPI", "Supabase", "Python", "Langfuse"],
+      tags: ["LangGraph", "FastAPI", "Supabase", "Python"],
     },
     {
-      title: "Airbus MBSE Copilot (TCS)",
-      description: "Gemini-powered Copilot for systems engineering models",
+      title: "Airbus MBSE Copilot",
+      description: "TCS Project",
       highlights: [
-        "Developed AI assistant for MBSE workflows",
+        "Developed Gemini-powered Copilot for systems engineering",
         "Implemented structured SysML-to-text reasoning pipeline",
         "Enhanced traceability across model artifacts",
       ],
-      tags: ["Gemini SDK", "Python", "SysML", "AI Reasoning"],
+      tags: ["Gemini SDK", "Python", "SysML"],
     },
     {
-      title: "Fikrah Analytics — Financial Compliance AI",
-      description: "Automated SME credit risk analysis system",
+      title: "Fikrah Analytics",
+      description: "Financial Compliance AI",
       highlights: [
         "Hybrid rule-based + LLM scoring system",
         "Explainable dashboards with Supabase + Python",
         "Reduced manual compliance review time by 60%",
       ],
-      tags: ["Python", "Supabase", "LLM", "Financial AI"],
+      tags: ["Python", "Supabase", "LLM"],
     },
     {
-      title: "OsmoseIQ — Hospitality Intelligence",
-      description: "Geo-optimized revenue management using AI location reasoning",
+      title: "OsmoseIQ",
+      description: "Hospitality Intelligence",
       highlights: [
         "Built Next.js + Supabase frontend with dynamic LLM assistant",
         "Deployed via Coolify with real-time telemetry",
         "AI-driven location and pricing optimization",
       ],
-      tags: ["Next.js", "Supabase", "AI", "Coolify"],
+      tags: ["Next.js", "Supabase", "AI"],
     },
     {
-      title: "Algofait — IoT-AI Integration",
-      description: "Smart aquaculture MVP with blockchain traceability",
+      title: "Algofait",
+      description: "IoT-AI Integration",
       highlights: [
-        "Integrated AI reasoning with blockchain",
-        "Adaptive control for water quality & feeding predictions",
+        "Integrated AI reasoning with blockchain traceability",
+        "Adaptive control for water quality predictions",
         "IoT sensor integration and monitoring",
       ],
-      tags: ["IoT", "AI", "Blockchain", "Python"],
+      tags: ["IoT", "AI", "Blockchain"],
     },
   ];
 
@@ -68,8 +67,6 @@ const Index = () => {
     "Next.js",
     "Tailwind",
     "Langfuse",
-    "Coolify",
-    "OpenTelemetry",
   ];
 
   const scrollToSection = (id: string) => {
@@ -78,84 +75,112 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gradient-start to-gradient-end">
+    <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="min-h-screen flex items-center justify-center px-6 pt-20"
       >
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
+        <div className="max-w-4xl mx-auto text-center animate-fade-in">
+          <Badge className="mb-8 bg-accent/10 text-accent border-accent/20 hover:bg-accent/20">
+            AI Engineer • Available January 2026
+          </Badge>
 
-        <div className="container mx-auto px-6 relative z-10 text-center animate-fade-in">
-          <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6">
-            I design intelligent systems
-            <br />
-            <span className="text-gradient">that think and act.</span>
+          <h1 className="font-heading text-6xl md:text-8xl font-bold mb-6 text-foreground tracking-tight">
+            Hadi Hijazi
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in-delay">
-            AI Engineer specialized in agentic architectures, reasoning pipelines, and multimodal
-            automation.
+          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Building intelligent systems at the intersection of research and real-world engineering
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 animate-fade-in-delay">
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => window.open("https://github.com/hadihijazi", "_blank")}
+              className="hover:text-accent transition-colors h-10 w-10"
+            >
+              <Github className="h-5 w-5" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => window.open("https://linkedin.com/in/hadihijazi", "_blank")}
+              className="hover:text-accent transition-colors h-10 w-10"
+            >
+              <Linkedin className="h-5 w-5" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => window.open("mailto:hadi.hijazi@example.com")}
+              className="hover:text-accent transition-colors h-10 w-10"
+            >
+              <Mail className="h-5 w-5" />
+            </Button>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               size="lg"
               onClick={() => scrollToSection("projects")}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium shadow-lg shadow-primary/20"
+              className="bg-foreground hover:bg-foreground/90 text-background"
             >
-              View My Work
+              View Projects
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-primary/50 hover:bg-primary/10"
-              onClick={() => window.open("#", "_blank")}
+              onClick={() => scrollToSection("contact")}
             >
-              <FileDown className="mr-2 h-4 w-4" />
-              Download CV
+              Get in Touch
             </Button>
           </div>
+        </div>
+      </section>
 
-          <p className="text-sm text-muted-foreground animate-fade-in-delay">
-            MSc Data Science & Business Analytics, ESSEC–CentraleSupélec (Graduating Dec 2025)
-          </p>
+      {/* About Section */}
+      <section id="about" className="py-32 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-12 text-center">
+            About
+          </h2>
 
-          <button
-            onClick={() => scrollToSection("projects")}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary animate-bounce"
-          >
-            <ArrowDown className="h-6 w-6" />
-          </button>
+          <div className="space-y-6 text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto">
+            <p>
+              I'm an AI Engineer focused on building reasoning systems that automate
+              decision-making and enhance human workflows.
+            </p>
+            <p>
+              Currently completing an MSc in Data Science & Business Analytics at
+              ESSEC–CentraleSupélec while working with Tata Consultancy Services on
+              Gemini-based Copilots for enterprise use cases.
+            </p>
+            <p>
+              My work bridges LLM infrastructure, system design, and applied machine
+              intelligence — bringing research-grade thinking into production environments.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-24 relative">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-              Featured <span className="text-gradient">Projects</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Building intelligent systems that bridge research-grade thinking with production
-              environments
-            </p>
-          </div>
+      <section id="projects" className="py-32 px-6 bg-muted/30">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-center">
+            Projects
+          </h2>
+          <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
+            Building intelligent systems that bridge research-grade thinking with production
+            environments
+          </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
-              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+              <div key={index} className="animate-fade-in">
                 <ProjectCard {...project} />
               </div>
             ))}
@@ -163,97 +188,66 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Tech Stack Section */}
-      <section id="tech" className="py-24 bg-secondary/20 relative">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-              Tech <span className="text-gradient">Stack</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-              I build modular AI systems that merge deterministic logic with large-scale reasoning
-              models — from ingestion to orchestration to monitoring.
-            </p>
-          </div>
+      {/* Experience / Tech Stack Section */}
+      <section id="experience" className="py-32 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-center">
+            Tech Stack
+          </h2>
+          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            I build modular AI systems that merge deterministic logic with large-scale reasoning
+            models
+          </p>
 
-          <div className="flex flex-wrap justify-center gap-3 animate-fade-in">
+          <div className="flex flex-wrap justify-center gap-3">
             {techStack.map((tech, index) => (
-              <div key={index} style={{ animationDelay: `${index * 50}ms` }}>
-                <TechBadge name={tech} />
-              </div>
+              <Badge
+                key={index}
+                variant="outline"
+                className="text-sm px-4 py-2 border-border hover:border-accent hover:text-accent transition-all cursor-default"
+              >
+                {tech}
+              </Badge>
             ))}
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-24 relative">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center md:text-left animate-fade-in">
-              <h2 className="font-heading text-4xl md:text-5xl font-bold mb-8">
-                About <span className="text-gradient">Me</span>
-              </h2>
-
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  I'm an AI Engineer focused on building reasoning systems that automate
-                  decision-making and enhance human workflows.
-                </p>
-                <p>
-                  Currently completing an MSc in Data Science & Business Analytics at
-                  ESSEC–CentraleSupélec while working with Tata Consultancy Services on
-                  Gemini-based Copilots for enterprise use cases.
-                </p>
-                <p>
-                  My work bridges LLM infrastructure, system design, and applied machine
-                  intelligence — bringing research-grade thinking into production environments.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-secondary/20 relative">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-              Let's Build the Next <span className="text-gradient">Intelligent System</span>
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Open to AI Engineer / ML Engineer roles starting January 2026.
-            </p>
+      <section id="contact" className="py-32 px-6 bg-muted/30">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">
+            Let's Build Something Great
+          </h2>
+          <p className="text-muted-foreground mb-12 text-lg">
+            Open to AI Engineer / ML Engineer roles starting January 2026
+          </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-              <Button
-                size="lg"
-                onClick={() => window.open("mailto:hadi.hijazi@example.com")}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium shadow-lg shadow-primary/20"
-              >
-                <Mail className="mr-2 h-4 w-4" />
-                Email Me
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary/50 hover:bg-primary/10"
-                onClick={() => window.open("https://linkedin.com/in/hadihijazi", "_blank")}
-              >
-                <Linkedin className="mr-2 h-4 w-4" />
-                LinkedIn
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary/50 hover:bg-primary/10"
-                onClick={() => window.open("https://github.com/hadihijazi", "_blank")}
-              >
-                <Github className="mr-2 h-4 w-4" />
-                GitHub
-              </Button>
-            </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button
+              size="lg"
+              onClick={() => window.open("mailto:hadi.hijazi@example.com")}
+              className="bg-foreground hover:bg-foreground/90 text-background"
+            >
+              <Mail className="mr-2 h-4 w-4" />
+              Email Me
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => window.open("https://linkedin.com/in/hadihijazi", "_blank")}
+            >
+              <Linkedin className="mr-2 h-4 w-4" />
+              LinkedIn
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => window.open("https://github.com/hadihijazi", "_blank")}
+            >
+              <Github className="mr-2 h-4 w-4" />
+              GitHub
+            </Button>
           </div>
         </div>
       </section>
@@ -261,7 +255,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-border">
         <div className="container mx-auto px-6 text-center text-sm text-muted-foreground">
-          © 2025 Hadi Hijazi — Built with Lovable
+          © 2025 Hadi Hijazi
         </div>
       </footer>
     </div>
