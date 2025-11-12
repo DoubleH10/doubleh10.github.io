@@ -421,20 +421,7 @@ const Index = () => {
         }} className="font-heading text-4xl md:text-5xl font-bold mb-6">
             Let's Build Something Great
           </motion.h2>
-          <motion.p initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.6,
-          delay: 0.1
-        }} className="text-muted-foreground mb-12 text-lg">
-            Open to Applied AI / ML Engineer roles from January 2026
-          </motion.p>
+          
 
           <motion.div initial={{
           opacity: 0,
