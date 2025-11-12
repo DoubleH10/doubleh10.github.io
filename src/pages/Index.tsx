@@ -245,7 +245,7 @@ const Index = () => {
               MSc candidate at <span className="text-foreground font-medium">ESSEC–CentraleSupélec</span> (graduating Dec 2025) specializing in Deep Learning, Generative AI, and MLOps. Research focus on Agentic AI for MBSE using Neo4j, Gemini, and SysML v2.
             </p>
             <p>
-              Creator of <span className="text-foreground font-medium">BLOQ AI</span>, a personal research sandbox for prototyping multi-agent systems, RAG pipelines, and fine-tuning experiments across finance, hospitality, and creative domains.
+              Created BLOQ AI, a personal research sandbox for prototyping multi-agent systems, RAG pipelines, and fine-tuning experiments across finance, hospitality, and creative domains. <span className="text-foreground font-medium">BLOQ AI</span>, a personal research sandbox for prototyping multi-agent systems, RAG pipelines, and fine-tuning experiments across finance, hospitality, and creative domains.
             </p>
             <p>
               Currently working at <span className="text-foreground font-medium">Tata Consultancy Services</span>, building enterprise-grade AI copilots that integrate LLMs with knowledge graphs and ERP systems. Passionate about deploying trustworthy AI that augments decision-making and transforms enterprise operations.
