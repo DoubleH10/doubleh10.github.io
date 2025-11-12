@@ -17,7 +17,7 @@ const Index = () => {
     role: "Applied AI Engineer & System Architect",
     location: "Remote / Paris",
     period: "Aug 2023 – Present",
-    highlights: ["Financial Intelligence: hybrid LLM + rule model for SME compliance & liquidity scoring", "Hospitality Dashboard: predictive analytics optimizing GEO ranking & dynamic pricing", "Agent Frameworks: LangGraph + FastAPI modules with Supabase + Langfuse", "Mentored junior engineers on ADK/LangGraph architecture"]
+    highlights: ["Financial Intelligence: hybrid LLM + rule model for SME compliance & liquidity scoring", "Hospitality Dashboard: predictive analytics optimizing GEO ranking & dynamic pricing", "Agent Frameworks: LangGraph + FastAPI modules with Supabase + Langfuse", "Mentored junior engineers on ADK architecture"]
   }, {
     company: "Ekimetrics",
     role: "Data Scientist Intern",
