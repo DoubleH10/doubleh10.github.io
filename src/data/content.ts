@@ -1,167 +1,123 @@
-export const metrics = [
-  { value: 5, suffix: "+", label: "Production AI Systems" },
-  { value: 70, suffix: "%", label: "Workload Reduction Delivered" },
-  { value: 40, suffix: "%", label: "Compute Optimization" },
-  { value: 28, suffix: "", label: "Public GitHub Repos" },
-  { value: 4, suffix: "", label: "Languages Spoken" },
-];
-
-export const experiences = [
+export const featuredProjects = [
   {
-    company: "Tata Consultancy Services (TCS)",
-    role: "AI Engineer",
-    location: "Paris, France",
-    period: "Jun 2025 – Jan 2026",
-    metric: "40% review reduction, 70% workload cut",
-    highlights: [
-      "Built MBSE copilot using Gemini Flash + Neo4j for automated requirement extraction and traceability in aerospace workflows; Dockerized full pipeline with graph-based dependency resolution; reduced engineering review cycles by 40%",
-      "Developed S/4HANA field-mapping agent combining rule-based logic with LLM reasoning; cut reconciliation workload by 70%",
-      "Built Video-to-Process Flow tool using VLMs to extract process flows from screen recordings; managed RAG over pharma knowledge base, auto-mapped flows into flowcharts with cross-video stitching and bottleneck detection",
-      "Designed self-improving agent loops (DSPy + Arize Phoenix) to score, monitor, and refine model responses via automated evaluation",
+    type: "Technical Report · TCS France",
+    title: "Agentic AI for Model-Based Systems Engineering",
+    description:
+      "Graph-centric architecture coupling LLM-based requirement extraction with a typed Neo4j knowledge graph and governed SysML v2 synchronization. Coordinated agents — Impact Analyzer and Graph Editor — perform reasoning and guarded edits under a bearer-scoped MCP API. Co-authored at TCS France.",
+    metrics: [
+      "F1 = 0.95 link traceability",
+      "0.87 weighted precision",
+      "~5s per evaluation",
+      "< 1% hallucination",
     ],
+    tags: ["Neo4j", "Gemini", "MCP", "DSPy", "Arize Phoenix", "SysML v2", "OpenMBEE"],
+    links: [],
   },
   {
-    company: "BLOQ Group (Family Business)",
-    role: "AI Operations Lead",
-    location: "Paris / Remote",
-    period: "2023 – Present",
-    metric: "5 paid client projects",
-    highlights: [
-      "Built AI financial operations system for Saudi SME market: workflow learning via screen recording, supervised agents for reconciliation and invoice follow-up, ZATCA-compliant for GCC regulatory requirements",
-      "Developed hospitality analytics platform: unified guest, revenue, and operational data from PMS systems (Apaleo, Cloudbeds) into daily actionable ops recommendations",
-      "Designed modular agent frameworks using Google ADK, FastAPI, Supabase, and Langfuse for observability across both verticals",
-      "Delivered 5 paid client projects including F&B business intelligence system, sales automation agents, and telepharmacy CV system (MediaPipe + AI audits)",
-    ],
+    type: "Enterprise Tool · Demonstrated to Sanofi",
+    title: "Video-to-Process Flow: VLM-Powered SOP Extraction",
+    description:
+      "Takes screen recordings of users performing tasks on ERPs or manual workflows. Detects the platform, identifies actions, and generates complete SOPs with flowcharts, decision points, timestamps, and bottleneck detection. Batch processes videos via cross-video stitching for multi-step workflows. Demonstrated to Sanofi pharma teams.",
+    metrics: [],
+    tags: ["Gemini Pro Vision", "FastAPI", "RAG", "Process Mining"],
+    links: [],
   },
   {
-    company: "Ekimetrics",
-    role: "Data Scientist Intern",
-    location: "Paris, France",
-    period: "Jun 2024 – Sep 2024",
-    metric: "15% forecast improvement, 40% compute savings",
-    highlights: [
-      "Enhanced Bayesian Marketing Mix Model by refactoring priors and feature interactions; improved ROI forecasting accuracy by 15%",
-      "Built unsupervised behavioral clustering model (KMeans + sequence features) for multinational automotive client",
-      "Optimized Databricks ETL pipelines, reducing compute time by 40%",
-    ],
-  },
-  {
-    company: "Infovista",
-    role: "Financial Data Analyst Intern",
-    location: "Massy, France",
-    period: "Jul 2022 – Sep 2022",
-    metric: "50% reporting cycle reduction",
-    highlights: [
-      "Built automated multi-entity reporting workflows in Power BI; reduced reporting cycle time by 50%",
+    type: "Shipped Product · Live Demo",
+    title: "TalentAI — Autonomous Recruitment Platform",
+    description:
+      "Full-pipeline AI recruitment: JD optimization via voice, candidate sourcing with anonymization, AI phone screening with adaptive deep-dive questioning, interview scheduling, and per-stage evaluation. Fully functional — try it live.",
+    metrics: [],
+    tags: ["Gemini 2.5 Flash", "Google ADK", "Next.js", "Vercel"],
+    links: [
+      { label: "Try it live", href: "https://hr-plus-talentai.vercel.app/" },
+      { label: "Source code", href: "https://github.com/DoubleH10" },
     ],
   },
 ];
 
 export const products = [
   {
-    name: "TalentAI",
-    tagline: "Autonomous Recruitment Platform",
-    description:
-      "Full-pipeline AI recruitment: JD optimization via voice, candidate sourcing with anonymization, AI phone screening with adaptive questioning, scheduling, and per-stage evaluation.",
-    tags: ["Gemini 2.5 Flash", "Google ADK", "Next.js"],
-    status: "Deployed" as const,
-    link: "https://github.com/doubleh10",
-  },
-  {
     name: "Fikrah Analytics",
-    tagline: "AI Financial Workforce",
     description:
-      "Hybrid LLM + rule-based model for SME compliance monitoring, liquidity scoring, and financial intelligence. Live production system serving real clients.",
-    tags: ["LangGraph", "Supabase", "Next.js", "FastAPI"],
-    status: "Live" as const,
-    link: "https://fikrahanalytics.com",
+      "AI financial workforce for Saudi SMEs. Learns company workflows via screen recording, creates supervised agents for reconciliation and invoice follow-up. ZATCA-compliant for GCC market.",
+    tags: ["LangGraph", "FastAPI", "Supabase", "Next.js"],
+    status: "live" as const,
+    link: "https://fikrah.bloq-ai.net/landing",
   },
   {
     name: "OsmoseIQ",
-    tagline: "AI Hotel Operations",
     description:
-      "Predictive analytics platform optimizing GEO ranking, dynamic pricing, and operational efficiency for hospitality businesses.",
+      "AI operations layer for hotels. Sits on top of existing PMS (Apaleo, Cloudbeds), ingests fragmented guest and revenue data, delivers daily actionable ops recommendations.",
     tags: ["Next.js", "Python", "Supabase", "Analytics"],
-    status: "Live" as const,
-    link: "https://osmoseiq.com",
+    status: "live" as const,
+    link: "https://osmose-iq-frontend.vercel.app",
   },
   {
-    name: "BLOQ AI",
-    tagline: "Company Website",
+    name: "BLOQ City",
     description:
-      "Marketing website showcasing AI consulting services and products. Built with modern web technologies and deployed for client acquisition.",
-    tags: ["Next.js", "Tailwind", "Framer Motion"],
-    status: "Live" as const,
-    link: "https://bloqai.tech",
+      "Multi-agent orchestration layer powering both verticals. Defined agent roles, tool usage, workflow execution, supervision logging, and Langfuse observability. The internal infrastructure behind Fikrah and OsmoseIQ.",
+    tags: ["LangGraph", "FastAPI", "Supabase", "Langfuse"],
+    status: "dev" as const,
+    link: null,
   },
 ];
 
-export const projects = [
+export const experiences = [
   {
-    title: "Mistral-7B Fine-Tuning",
-    description: "Hospitality Domain Adaptation",
+    role: "AI Engineer",
+    company: "Tata Consultancy Services · Paris",
+    period: "Jun 2025 – Jan 2026",
     highlights: [
-      "Fine-tuned Mistral-7B-Instruct on 2.5k samples using QLoRA (4-bit NF4, rank=8)",
-      "Evaluation pipeline across 4 tasks (dialog, FAQ, sentiment, rewriting)",
-      "Stack: Transformers, PEFT, TRL, bitsandbytes, Colab A100",
+      "Built MBSE copilot (Gemini + Neo4j) for aerospace requirement extraction — 40% review reduction, published technical report",
+      "Developed S/4HANA field-mapping agent combining rules + LLM reasoning — 70% reconciliation workload cut",
+      "Built Video-to-Process Flow tool using VLMs — demonstrated to Sanofi",
+      "Designed self-improving agent loops with DSPy + Arize Phoenix for automated evaluation",
     ],
-    tags: ["Transformers", "PEFT", "TRL", "QLoRA"],
-    github: "https://github.com/doubleh10",
   },
   {
-    title: "Agentic Orchestration",
-    description: "Voyager-Inspired Multi-Agent System",
+    role: "AI Engineer & Technical Lead",
+    company: "BLOQ AI · Paris / Remote",
+    period: "2023 – Present",
     highlights: [
-      "LangGraph + Gemini ADK multi-agent layer",
-      "Planner-executor-critic loops & tool coordination",
-      "Demonstrated emergent collaboration for automation",
+      "Built Fikrah (AI finance ops) and OsmoseIQ (AI hotel ops) — deployed, in pilot users",
+      "Architected BLOQ City: multi-agent orchestration layer with defined roles, supervision, and observability",
+      "Delivered 5 paid client projects including F&B BI system and sales automation agents",
     ],
-    tags: ["LangGraph", "Gemini ADK", "Multi-Agent"],
-    github: "https://github.com/doubleh10",
   },
   {
-    title: "AI Content Agent",
-    description: "Automated commercial video generation",
+    role: "Data Scientist Intern",
+    company: "Ekimetrics · Paris",
+    period: "Jun – Sep 2024",
     highlights: [
-      "Automated commercial video generation with n8n + Fal AI + Heygen",
-      "Manual production time reduced by 80%",
-      "End-to-end automation pipeline",
+      "Enhanced Bayesian Marketing Mix Model — 15% improvement in ROI forecasting accuracy",
+      "Built unsupervised behavioral clustering for multinational automotive client",
+      "Optimized Databricks ETL pipelines — 40% compute time reduction",
     ],
-    tags: ["n8n", "Fal AI", "Heygen", "Automation"],
-    github: "https://github.com/doubleh10",
+  },
+];
+
+export const writings = [
+  {
+    type: "Report",
+    title: "Agentic AI for Model-Based Systems Engineering",
+    description:
+      "Graph-centric architecture integrating SysML v2, OpenMBEE, and Neo4j. Co-authored at TCS France. F1 = 0.95 link traceability, 0.87 weighted precision.",
+    meta: "January 2026 · Co-authored with Dr. Yassine Motie",
   },
   {
-    title: "RAG Research Assistant",
-    description: "Knowledge retrieval pipeline",
-    highlights: [
-      "LangChain + ChromaDB retrieval pipeline",
-      "Confidence weighting system",
-      "Answer accuracy improved by +25%",
-    ],
-    tags: ["LangChain", "ChromaDB", "RAG"],
-    github: "https://github.com/doubleh10",
+    type: "Coming Soon",
+    title: "Shadow Mode: Building Trust-Based Autonomy Escalation for AI Agents",
+    description:
+      "How we designed progressive autonomy — agents that propose before executing, earning trust through demonstrated accuracy.",
+    meta: "In progress",
   },
   {
-    title: "Video-to-Process Flow",
-    description: "VLM-powered process extraction",
-    highlights: [
-      "Extract process flows from screen recordings using VLMs",
-      "RAG over pharma knowledge base with auto-mapping into flowcharts",
-      "Cross-video stitching and bottleneck detection",
-    ],
-    tags: ["VLMs", "RAG", "FastAPI", "Process Mining"],
-    github: "https://github.com/doubleh10",
-  },
-  {
-    title: "Domain-Specific AI Platforms",
-    description: "OsmoseIQ, Fikrah Analytics, FitFlow AI",
-    highlights: [
-      "End-to-end LangGraph / Supabase stacks",
-      "Hospitality, FinTech, and Fitness domains",
-      "Production-ready automation systems",
-    ],
-    tags: ["LangGraph", "Supabase", "Next.js"],
-    github: "https://github.com/doubleh10",
+    type: "Coming Soon",
+    title: "Cold-Start ML in Production: Bootstrapping Hotel Ops AI With Zero Data",
+    description:
+      "Kaggle pre-training, LLM scaffolding, and progressive model replacement for hospitality operations with no historical data.",
+    meta: "In progress",
   },
 ];
 
@@ -174,52 +130,37 @@ export const skills = {
     "TRL",
     "Embeddings",
     "RAG",
-    "Evaluation Pipelines",
-    "4-bit Quantization",
+    "Eval Pipelines",
   ],
   "Agent Systems": [
     "LangGraph",
-    "LangChain",
     "Google ADK",
     "DSPy",
     "MCP",
-    "Tool Integration",
     "Langfuse",
     "Arize Phoenix",
   ],
-  Backend: ["Python", "FastAPI", "Supabase", "Neo4j", "Qdrant", "Docker", "CI/CD"],
+  Backend: ["Python", "FastAPI", "Supabase", "Neo4j", "Qdrant", "Docker"],
   "Data & Cloud": ["SQL", "Databricks", "Spark", "Azure", "GCP"],
   Frontend: ["React", "Next.js", "TypeScript", "Tailwind"],
+  Languages: [
+    "English (fluent)",
+    "French (fluent)",
+    "Arabic (native)",
+    "Spanish (intermediate)",
+  ],
 };
 
-export const education = [
-  {
-    institution: "ESSEC Business School & CentraleSupélec",
-    degree: "MSc in Data Science & Business Analytics",
-    period: "2023 – 2025",
-    details:
-      "Ranked #3 worldwide (QS 2024). Deep Learning, Generative AI, Forecasting, Econometrics, MLOps.",
-  },
-  {
-    institution: "ESADE Business School",
-    degree: "BBA with Digital Minor",
-    period: "2019 – 2023",
-    details: "Rank 11/356. Barcelona.",
-  },
-];
-
 export const socialLinks = {
-  github: "https://github.com/doubleh10",
-  linkedin: "https://linkedin.com/in/hadi-hijazi",
+  github: "https://github.com/DoubleH10",
+  linkedin: "https://www.linkedin.com/in/hadi-hijazi/",
   email: "hijazi.hadi@gmail.com",
-  phone: "+33 7 45 18 75 54",
 };
 
 export const navSections = [
-  "about",
-  "experience",
+  "work",
   "products",
-  "projects",
-  "skills",
+  "experience",
+  "writing",
   "contact",
 ];

@@ -1,99 +1,106 @@
 import { motion } from "framer-motion";
 import { fadeUp, heroStagger } from "@/lib/animations";
-import { Button } from "@/components/ui/button";
-import { Download, ArrowDown } from "lucide-react";
+import { socialLinks } from "@/data/content";
+import { ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex items-center justify-center px-6 pt-20 bg-background dot-pattern"
-    >
+    <section id="hero" className="pt-32 pb-16 px-8">
       <motion.div
         variants={heroStagger}
         initial="hidden"
         animate="visible"
-        className="max-w-5xl mx-auto text-center"
+        className="max-w-content mx-auto"
       >
-        {/* Status badge */}
-        <motion.div variants={fadeUp} className="mb-8">
-          <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent-foreground">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
-            </span>
-            Available for opportunities
-          </span>
-        </motion.div>
+        <motion.span
+          variants={fadeUp}
+          className="block font-mono text-[0.75rem] tracking-[0.12em] uppercase text-accent mb-5"
+        >
+          AI Engineer · Paris
+        </motion.span>
 
-        {/* Name */}
         <motion.h1
           variants={fadeUp}
-          className="font-heading text-7xl sm:text-8xl md:text-9xl font-bold text-foreground tracking-tighter mb-4"
+          className="font-display text-[clamp(2.8rem,5vw,4rem)] font-normal leading-[1.15] text-foreground mb-6 max-w-[700px]"
         >
-          Hadi Hijazi
+          I build agent systems that enterprises{" "}
+          <em className="italic text-accent">actually trust</em> in production.
         </motion.h1>
 
-        {/* Title */}
         <motion.p
           variants={fadeUp}
-          className="font-heading text-2xl sm:text-3xl md:text-4xl font-medium text-muted-foreground tracking-tight mb-8"
+          className="text-[1.05rem] leading-[1.7] text-muted-foreground max-w-[560px] mb-8"
         >
-          <span className="text-accent font-bold">AI</span> Engineer
+          Production experience with LLM agent systems, fine-tuning (QLoRA), and
+          evaluation pipelines (DSPy, Arize Phoenix). MSc from
+          ESSEC–CentraleSupélec. Currently building vertical AI systems for
+          finance and hospitality.
         </motion.p>
 
-        {/* Tagline */}
-        <motion.p
-          variants={fadeUp}
-          className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed"
-        >
-          AI Engineer with production experience building LLM agent systems,
-          fine-tuning (QLoRA), and evaluation pipelines. Hands-on with agent
-          orchestration, RAG pipelines, and full-stack deployment. MSc from
-          ESSEC-CentraleSupélec (QS #3). Seeking AI/ML engineering roles to
-          deepen production experience at scale.
-        </motion.p>
-
-        {/* CTA Buttons */}
         <motion.div
           variants={fadeUp}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex items-center gap-6 flex-wrap"
         >
-          <Button
-            size="lg"
-            onClick={() => scrollToSection("products")}
-            className="bg-accent hover:bg-accent/90 text-accent-foreground font-heading font-semibold px-8 h-12 text-base"
+          <a
+            href={socialLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[0.85rem] font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
-            View My Work
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={() => window.open("/Hadi_Hijazi_CV_Safe.pdf", "_blank")}
-            className="font-heading font-semibold px-8 h-12 text-base border-border hover:border-accent/50"
+            GitHub
+          </a>
+          <a
+            href={socialLinks.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[0.85rem] font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
-            <Download className="mr-2 h-4 w-4" />
-            Download CV
-          </Button>
+            LinkedIn
+          </a>
+          <a
+            href={`mailto:${socialLinks.email}`}
+            className="text-[0.85rem] font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Email
+          </a>
+          <a
+            href="/Hadi_Hijazi_CV_Safe.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[0.85rem] font-medium text-accent border-b border-accent pb-px hover:text-foreground hover:border-foreground transition-colors inline-flex items-center gap-1.5"
+          >
+            Download CV <ArrowDown className="h-3.5 w-3.5" />
+          </a>
         </motion.div>
 
-        {/* Scroll indicator */}
         <motion.div
           variants={fadeUp}
-          className="mt-20"
+          className="mt-12 pt-8 border-t border-border flex gap-12 flex-wrap"
         >
-          <motion.button
-            onClick={() => scrollToSection("metrics")}
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="text-muted-foreground/50 hover:text-accent transition-colors"
-          >
-            <ArrowDown className="h-5 w-5" />
-          </motion.button>
+          <div className="text-[0.82rem]">
+            <strong className="block font-mono text-[0.78rem] font-medium text-foreground mb-0.5">
+              Currently
+            </strong>
+            <span className="text-muted-foreground">AI Engineer & Tech Lead at BLOQ AI</span>
+          </div>
+          <div className="text-[0.82rem]">
+            <strong className="block font-mono text-[0.78rem] font-medium text-foreground mb-0.5">
+              Education
+            </strong>
+            <span className="text-muted-foreground">ESSEC–CentraleSupélec (QS #3)</span>
+          </div>
+          <div className="text-[0.82rem]">
+            <strong className="block font-mono text-[0.78rem] font-medium text-foreground mb-0.5">
+              Languages
+            </strong>
+            <span className="text-muted-foreground">EN · FR · AR · ES</span>
+          </div>
+          <div className="text-[0.82rem]">
+            <strong className="block font-mono text-[0.78rem] font-medium text-foreground mb-0.5">
+              Open to
+            </strong>
+            <span className="text-muted-foreground">AI/ML Engineering roles</span>
+          </div>
         </motion.div>
       </motion.div>
     </section>

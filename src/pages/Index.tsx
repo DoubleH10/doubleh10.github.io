@@ -1,65 +1,40 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/sections/HeroSection";
-import MetricsBar from "@/components/sections/MetricsBar";
-import AboutSection from "@/components/sections/AboutSection";
-import ExperienceSection from "@/components/sections/ExperienceSection";
+import FeaturedWorkSection from "@/components/sections/FeaturedWorkSection";
 import ProductsSection from "@/components/sections/ProductsSection";
-import ProjectsSection from "@/components/sections/ProjectsSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+import WritingSection from "@/components/sections/WritingSection";
 import SkillsSection from "@/components/sections/SkillsSection";
-import EducationSection from "@/components/sections/EducationSection";
 import ContactSection from "@/components/sections/ContactSection";
-import { Github, Linkedin, Mail } from "lucide-react";
-import { socialLinks } from "@/data/content";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <a
+        href="#work"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-foreground focus:text-background focus:px-4 focus:py-2 focus:rounded-md focus:text-sm"
+      >
+        Skip to content
+      </a>
       <Navigation />
+      <main>
       <HeroSection />
-      <MetricsBar />
-      <AboutSection />
-      <ExperienceSection />
+      <FeaturedWorkSection />
       <ProductsSection />
-      <ProjectsSection />
+      <ExperienceSection />
+      <WritingSection />
       <SkillsSection />
-      <EducationSection />
       <ContactSection />
+      </main>
 
-      {/* Footer */}
-      <footer className="bg-[hsl(220,20%,12%)] text-[hsl(40,10%,96%)] py-10 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-[hsl(220,10%,50%)]">
+      <footer className="border-t border-border py-8 px-8">
+        <div className="max-w-content mx-auto flex justify-between items-center">
+          <p className="text-[0.78rem] text-tertiary">
             &copy; {new Date().getFullYear()} Hadi Hijazi
           </p>
-
-          <div className="flex items-center gap-4">
-            <a
-              href={socialLinks.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[hsl(220,10%,50%)] hover:text-[hsl(40,10%,96%)] transition-colors"
-            >
-              <Github className="h-4 w-4" />
-            </a>
-            <a
-              href={socialLinks.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[hsl(220,10%,50%)] hover:text-[hsl(40,10%,96%)] transition-colors"
-            >
-              <Linkedin className="h-4 w-4" />
-            </a>
-            <a
-              href={`mailto:${socialLinks.email}`}
-              className="text-[hsl(220,10%,50%)] hover:text-[hsl(40,10%,96%)] transition-colors"
-            >
-              <Mail className="h-4 w-4" />
-            </a>
-          </div>
-
-          <p className="text-xs text-[hsl(220,10%,50%)]">
-            Built with React + Tailwind
-          </p>
+          <span className="font-mono text-[0.72rem] text-tertiary tracking-[0.04em]">
+            EN · FR · AR · ES
+          </span>
         </div>
       </footer>
     </div>

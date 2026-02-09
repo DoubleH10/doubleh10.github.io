@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -9,7 +10,7 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "960px",
       },
     },
     extend: {
@@ -38,6 +39,7 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          light: "hsl(var(--accent-light))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -47,6 +49,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        tertiary: "hsl(var(--tertiary))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -64,10 +71,13 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        heading: ["Space Grotesk", "system-ui", "sans-serif"],
-        body: ["DM Sans", "system-ui", "sans-serif"],
+        display: ["Instrument Serif", "Georgia", "serif"],
+        body: ["DM Sans", "-apple-system", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
-        sans: ["DM Sans", "system-ui", "sans-serif"],
+        sans: ["DM Sans", "-apple-system", "sans-serif"],
+      },
+      maxWidth: {
+        content: "960px",
       },
       keyframes: {
         "accordion-down": {
@@ -79,7 +89,7 @@ export default {
           to: { height: "0" },
         },
         "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "slide-in-left": {
@@ -105,5 +115,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindAnimate],
 } satisfies Config;

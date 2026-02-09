@@ -5,27 +5,26 @@ interface SectionHeaderProps {
   label: string;
   title: string;
   subtitle?: string;
-  className?: string;
 }
 
-const SectionHeader = ({ label, title, subtitle, className = "" }: SectionHeaderProps) => {
+const SectionHeader = ({ label, title, subtitle }: SectionHeaderProps) => {
   return (
-    <div className={`text-center mb-16 ${className}`}>
-      <motion.span
+    <div className="mb-12">
+      <motion.p
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
         viewport={viewportConfig}
-        className="inline-block font-mono text-sm text-accent font-medium tracking-wider uppercase mb-4"
+        className="font-mono text-[0.72rem] tracking-[0.14em] uppercase text-tertiary mb-3"
       >
         {label}
-      </motion.span>
+      </motion.p>
       <motion.h2
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
         viewport={viewportConfig}
-        className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-4"
+        className="font-display text-3xl sm:text-4xl md:text-[2.4rem] font-normal leading-[1.2] text-foreground mb-4"
       >
         {title}
       </motion.h2>
@@ -35,7 +34,7 @@ const SectionHeader = ({ label, title, subtitle, className = "" }: SectionHeader
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="text-muted-foreground text-lg max-w-2xl mx-auto"
+          className="text-[0.95rem] text-muted-foreground max-w-[520px] leading-relaxed"
         >
           {subtitle}
         </motion.p>
