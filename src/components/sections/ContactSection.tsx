@@ -75,7 +75,7 @@ const ContactSection = () => {
           <Button
             variant="ghost"
             size="sm"
-            onClick={() => window.open("/Hadi_Hijazi_CV.pdf", "_blank")}
+            onClick={() => window.open("/Hadi_Hijazi_CV_Safe.pdf", "_blank")}
             className="text-accent-foreground/60 hover:text-accent-foreground hover:bg-accent-foreground/10"
           >
             <Download className="mr-2 h-4 w-4" />

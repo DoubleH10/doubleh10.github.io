@@ -51,9 +51,11 @@ const HeroSection = () => {
           variants={fadeUp}
           className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed"
         >
-          I build intelligent systems that think, learn, and ship. From
-          fine-tuned LLMs to multi-agent orchestration — I turn AI research
-          into products that drive measurable outcomes.
+          AI Engineer with production experience building LLM agent systems,
+          fine-tuning (QLoRA), and evaluation pipelines. Hands-on with agent
+          orchestration, RAG pipelines, and full-stack deployment. MSc from
+          ESSEC-CentraleSupélec (QS #3). Seeking AI/ML engineering roles to
+          deepen production experience at scale.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -71,7 +73,7 @@ const HeroSection = () => {
           <Button
             size="lg"
             variant="outline"
-            onClick={() => window.open("/Hadi_Hijazi_CV.pdf", "_blank")}
+            onClick={() => window.open("/Hadi_Hijazi_CV_Safe.pdf", "_blank")}
             className="font-heading font-semibold px-8 h-12 text-base border-border hover:border-accent/50"
           >
             <Download className="mr-2 h-4 w-4" />

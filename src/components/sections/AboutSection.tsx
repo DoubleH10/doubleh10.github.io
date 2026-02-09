@@ -6,23 +6,23 @@ import { Brain, Layers, Rocket, Globe } from "lucide-react";
 const capabilities = [
   {
     icon: Brain,
-    title: "AI & Deep Learning",
-    description: "Fine-tuning LLMs, RAG pipelines, and reasoning systems",
+    title: "ML Engineering",
+    description: "Fine-tuning (QLoRA), evaluation pipelines, RAG systems",
   },
   {
     icon: Layers,
-    title: "Agentic Architectures",
-    description: "Multi-agent orchestration with LangGraph & Gemini ADK",
+    title: "Agent Systems",
+    description: "LangGraph, Google ADK, DSPy, MCP, tool integration",
   },
   {
     icon: Rocket,
-    title: "Product Engineering",
-    description: "End-to-end deployment from prototype to production",
+    title: "Full-Stack Deploy",
+    description: "FastAPI, React, Docker, CI/CD — prototype to production",
   },
   {
     icon: Globe,
-    title: "Business Strategy",
-    description: "Dual expertise bridging technical execution and business impact",
+    title: "Observability",
+    description: "Langfuse, Arize Phoenix — scoring, monitoring, refinement",
   },
 ];
 
@@ -46,28 +46,30 @@ const AboutSection = () => {
             className="space-y-6 text-muted-foreground leading-relaxed"
           >
             <p>
-              MSc graduate from{" "}
+              AI Engineer with production experience building LLM agent systems,
+              fine-tuning (QLoRA), and evaluation pipelines (DSPy, Arize Phoenix).
+              Hands-on with agent orchestration (LangGraph, Google ADK), RAG
+              pipelines, and full-stack deployment (FastAPI, React).
+            </p>
+            <p>
+              MSc from{" "}
               <span className="text-foreground font-medium">
-                ESSEC & CentraleSupelec
+                ESSEC-CentraleSupélec
               </span>{" "}
-              specializing in Deep Learning, Generative AI, and MLOps. Research
-              focus on Agentic AI for MBSE using Neo4j, Gemini, and SysML v2.
-            </p>
-            <p>
-              Created{" "}
-              <span className="text-foreground font-medium">BLOQ AI</span>, a
-              personal research sandbox for prototyping multi-agent systems, RAG
-              pipelines, and fine-tuning experiments across finance, hospitality,
-              and creative domains.
-            </p>
-            <p>
-              Currently building enterprise-grade AI copilots at{" "}
+              (QS #3). Built production AI systems at{" "}
               <span className="text-foreground font-medium">
                 Tata Consultancy Services
+              </span>{" "}
+              and led AI operations at{" "}
+              <span className="text-foreground font-medium">
+                BLOQ Group
               </span>
-              , integrating LLMs with knowledge graphs and ERP systems.
-              Passionate about deploying trustworthy AI that augments
-              decision-making and transforms enterprise operations.
+              , delivering paid client projects across finance, hospitality, and
+              enterprise domains.
+            </p>
+            <p>
+              Seeking AI/ML engineering roles to deepen production experience at
+              scale. Quadrilingual: English, French, Arabic, Spanish.
             </p>
             <div className="pt-4 space-y-2">
               <p className="text-sm">
@@ -77,7 +79,7 @@ const AboutSection = () => {
               </p>
               <p className="text-sm">
                 <span className="text-foreground font-medium">Interests:</span>{" "}
-                Calisthenics, Muay Thai, Guitar, Strategic Reading
+                Calisthenics, Guitar, Strategic Reading
               </p>
             </div>
           </motion.div>
