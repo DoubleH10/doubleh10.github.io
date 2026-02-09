@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 import SectionHeader from "@/components/SectionHeader";
 import { writings } from "@/data/content";
+import { ArrowRight } from "lucide-react";
 
 const WritingSection = () => {
   return (
@@ -43,6 +44,17 @@ const WritingSection = () => {
                 <p className="font-mono text-[0.72rem] text-tertiary mt-2">
                   {item.meta}
                 </p>
+                {"href" in item && item.href && (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[0.82rem] font-medium text-accent inline-flex items-center gap-1.5 hover:text-foreground transition-colors mt-2 group/link"
+                  >
+                    Read the paper
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-0.5" />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

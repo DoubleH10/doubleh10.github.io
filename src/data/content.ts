@@ -11,7 +11,9 @@ export const featuredProjects = [
       "< 1% hallucination",
     ],
     tags: ["Neo4j", "Gemini", "MCP", "DSPy", "Arize Phoenix", "SysML v2", "OpenMBEE"],
-    links: [],
+    links: [
+      { label: "Read the paper", href: "/paper_latex_package (2).pdf" },
+    ],
   },
   {
     type: "Enterprise Tool · Demonstrated to Sanofi",
@@ -38,9 +40,9 @@ export const featuredProjects = [
 
 export const products = [
   {
-    name: "Fikrah Analytics",
+    name: "Fikrah",
     description:
-      "AI financial workforce for Saudi SMEs. Learns company workflows via screen recording, creates supervised agents for reconciliation and invoice follow-up. ZATCA-compliant for GCC market.",
+      "The finance team that adapts to your stage. AI operators that follow your SOPs, support your humans, and grow with your financial maturity. Built for Saudi SMEs, ZATCA-compliant.",
     tags: ["LangGraph", "FastAPI", "Supabase", "Next.js"],
     status: "live" as const,
     link: "https://fikrah.bloq-ai.net/landing",
@@ -48,10 +50,10 @@ export const products = [
   {
     name: "OsmoseIQ",
     description:
-      "AI operations layer for hotels. Sits on top of existing PMS (Apaleo, Cloudbeds), ingests fragmented guest and revenue data, delivers daily actionable ops recommendations.",
+      "The AI brain for hospitality. Unified middleware that integrates siloed hotel systems into a single, proactive AI operating system for independent and boutique hotels.",
     tags: ["Next.js", "Python", "Supabase", "Analytics"],
     status: "live" as const,
-    link: "https://osmose-iq-frontend.vercel.app",
+    link: "https://osmose-iq-frontend.vercel.app/landing",
   },
   {
     name: "BLOQ City",
@@ -104,6 +106,7 @@ export const writings = [
     description:
       "Graph-centric architecture integrating SysML v2, OpenMBEE, and Neo4j. Co-authored at TCS France. F1 = 0.95 link traceability, 0.87 weighted precision.",
     meta: "January 2026 · Co-authored with Dr. Yassine Motie",
+    href: "/paper_latex_package (2).pdf",
   },
   {
     type: "Coming Soon",
