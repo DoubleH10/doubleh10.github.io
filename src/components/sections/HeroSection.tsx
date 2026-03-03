@@ -64,7 +64,7 @@ const HeroSection = () => {
             Email
           </a>
           <a
-            href="/Hadi_Hijazi_CV_Safe.pdf"
+            href="/Hadi_Hijazi_CV_2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[0.85rem] font-medium text-accent border-b border-accent pb-px hover:text-foreground hover:border-foreground transition-colors inline-flex items-center gap-1.5"

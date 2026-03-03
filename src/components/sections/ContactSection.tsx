@@ -54,7 +54,7 @@ const ContactSection = () => {
               GitHub
             </a>
             <a
-              href="/Hadi_Hijazi_CV_Safe.pdf"
+              href="/Hadi_Hijazi_CV_2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[0.85rem] font-medium text-foreground px-5 py-2.5 border border-border rounded-md hover:border-foreground hover:bg-foreground hover:text-background transition-colors"
