@@ -22,7 +22,9 @@ export const featuredProjects = [
       "Takes screen recordings of users performing tasks on ERPs or manual workflows. Detects the platform, identifies actions, and generates complete SOPs with flowcharts, decision points, timestamps, and bottleneck detection. Batch processes videos via cross-video stitching for multi-step workflows. Demonstrated to Sanofi pharma teams.",
     metrics: [],
     tags: ["Gemini Pro Vision", "FastAPI", "RAG", "Process Mining"],
-    links: [],
+    links: [
+      { label: "Source code", href: "https://github.com/DoubleH10/Video-SOP" },
+    ],
   },
   {
     type: "Shipped Product · Live Demo",
@@ -55,14 +57,6 @@ export const products = [
     status: "live" as const,
     link: "https://osmose-iq-frontend.vercel.app/landing",
   },
-  {
-    name: "BLOQ City",
-    description:
-      "Multi-agent orchestration layer powering both verticals. Defined agent roles, tool usage, workflow execution, supervision logging, and Langfuse observability. The internal infrastructure behind Fikrah and OsmoseIQ.",
-    tags: ["LangGraph", "FastAPI", "Supabase", "Langfuse"],
-    status: "dev" as const,
-    link: null,
-  },
 ];
 
 export const experiences = [
@@ -83,8 +77,7 @@ export const experiences = [
     period: "2025 – Present",
     highlights: [
       "Built Fikrah (AI finance ops) and OsmoseIQ (AI hotel ops) — deployed, in pilot users",
-      "Architected BLOQ City: multi-agent orchestration layer with defined roles, supervision, and observability",
-      "Delivered 5 paid client projects including F&B BI system and sales automation agents",
+      "Built internal tooling for multi-agent coordination and observability",
     ],
   },
   {
