@@ -27,6 +27,21 @@ export const featuredProjects = [
     ],
   },
   {
+    type: "Open Source · MCP Server",
+    title: "ZATCA MCP — AI-Native Saudi E-Invoicing",
+    description:
+      "First open-source MCP server for Saudi e-invoicing. 8 tools for generating, signing, validating, and submitting ZATCA-compliant invoices via natural language. UBL 2.1 XML, XAdES-BES digital signing, 16-rule validation engine, and full Phase 1 + 2 support. 100 tests passing.",
+    metrics: [
+      "8 MCP tools",
+      "100 tests passing",
+      "Phase 1 + 2 compliant",
+    ],
+    tags: ["Python", "MCP", "ZATCA", "Cryptography", "UBL 2.1"],
+    links: [
+      { label: "Source code", href: "https://github.com/DoubleH10/zatca-mcp" },
+    ],
+  },
+  {
     type: "Shipped Product · Live Demo",
     title: "TalentAI — Autonomous Recruitment Platform",
     description:
