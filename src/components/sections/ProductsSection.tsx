@@ -9,7 +9,7 @@ const ProductsSection = () => {
     <section id="products" className="py-28 px-8">
       <div className="max-w-content mx-auto">
         <SectionHeader
-          label="Startup Work"
+          label="Technical Products"
           title="Products I'm building"
           subtitle="Vertical AI systems for finance and hospitality, built through BLOQ AI. Real code, deployed systems, active pilots."
         />

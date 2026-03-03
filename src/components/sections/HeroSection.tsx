@@ -81,7 +81,7 @@ const HeroSection = () => {
             <strong className="block font-mono text-[0.78rem] font-medium text-foreground mb-0.5">
               Currently
             </strong>
-            <span className="text-muted-foreground">AI Engineer & Tech Lead at BLOQ AI</span>
+            <span className="text-muted-foreground">AI Engineer at BLOQ AI</span>
           </div>
           <div className="text-[0.82rem]">
             <strong className="block font-mono text-[0.78rem] font-medium text-foreground mb-0.5">

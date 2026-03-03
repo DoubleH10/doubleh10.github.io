@@ -78,9 +78,9 @@ export const experiences = [
     ],
   },
   {
-    role: "AI Engineer & Technical Lead",
+    role: "AI Engineer",
     company: "BLOQ AI · Paris / Remote",
-    period: "2023 – Present",
+    period: "2025 – Present",
     highlights: [
       "Built Fikrah (AI finance ops) and OsmoseIQ (AI hotel ops) — deployed, in pilot users",
       "Architected BLOQ City: multi-agent orchestration layer with defined roles, supervision, and observability",
@@ -107,20 +107,6 @@ export const writings = [
       "Graph-centric architecture integrating SysML v2, OpenMBEE, and Neo4j. Co-authored at TCS France. F1 = 0.95 link traceability, 0.87 weighted precision.",
     meta: "January 2026 · Co-authored with Dr. Yassine Motie",
     href: "/paper_latex_package (2).pdf",
-  },
-  {
-    type: "Coming Soon",
-    title: "Shadow Mode: Building Trust-Based Autonomy Escalation for AI Agents",
-    description:
-      "How we designed progressive autonomy — agents that propose before executing, earning trust through demonstrated accuracy.",
-    meta: "In progress",
-  },
-  {
-    type: "Coming Soon",
-    title: "Cold-Start ML in Production: Bootstrapping Hotel Ops AI With Zero Data",
-    description:
-      "Kaggle pre-training, LLM scaffolding, and progressive model replacement for hospitality operations with no historical data.",
-    meta: "In progress",
   },
 ];
 

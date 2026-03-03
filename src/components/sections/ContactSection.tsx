@@ -24,8 +24,7 @@ const ContactSection = () => {
             variants={fadeUp}
             className="text-[0.95rem] text-muted-foreground max-w-[480px] mb-8"
           >
-            Open to AI/ML engineering roles in Paris. Also available for
-            consulting and research collaborations in agentic AI and applied ML.
+            Open to AI/ML engineering roles in Paris.
           </motion.p>
 
           <motion.div
