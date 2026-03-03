@@ -29,6 +29,16 @@
   </head>
 
   <body>
+    <!-- GitHub Pages SPA redirect handler -->
+    <script>
+      (function () {
+        var redirect = window.location.search.match(/^\?\/(.*)/);
+        if (redirect) {
+          var decoded = redirect[1].replace(/~and~/g, '&');
+          window.history.replaceState(null, null, '/' + decoded + window.location.hash);
+        }
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
